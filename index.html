@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Modern Registration | Premium Forms</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <div class="page-wrapper">
+        <div class="form-container">
+            <header class="form-header">
+                <h1>Create Account</h1>
+                <p>Join our premium community today.</p>
+            </header>
+
+            <form id="registrationForm" novalidate>
+                <!-- Full Name -->
+                <div class="form-group">
+                    <label for="fullName">Full Name</label>
+                    <div class="input-wrapper">
+                        <input type="text" id="fullName" name="fullName" placeholder="e.g. John Doe" required>
+                        <span class="icon">👤</span>
+                    </div>
+                    <span class="error-message"></span>
+                </div>
+
+                <!-- Email -->
+                <div class="form-group">
+                    <label for="email">Email Address</label>
+                    <div class="input-wrapper">
+                        <input type="email" id="email" name="email" placeholder="john@example.com" required>
+                        <span class="icon">✉️</span>
+                    </div>
+                    <span class="error-message"></span>
+                </div>
+
+                <!-- Password -->
+                <div class="form-group">
+                    <label for="password">Password</label>
+                    <div class="input-wrapper">
+                        <input type="password" id="password" name="password" placeholder="••••••••" required minlength="8">
+                        <span class="icon">🔒</span>
+                    </div>
+                    <span class="error-message"></span>
+                </div>
+
+                <!-- Account Type (Select) -->
+                <div class="form-group">
+                    <label for="accountType">Account Type</label>
+                    <div class="input-wrapper">
+                        <select id="accountType" name="accountType" required>
+                            <option value="" disabled selected>Select an option</option>
+                            <option value="personal">Personal</option>
+                            <option value="business">Business</option>
+                            <option value="creator">Creator</option>
+                        </select>
+                        <span class="icon dropdown-icon">▼</span>
+                    </div>
+                    <span class="error-message"></span>
+                </div>
+
+                <!-- Newsletter (Radio) -->
+                <div class="form-group radio-group">
+                    <label class="group-label">Subscribe to Newsletter?</label>
+                    <div class="radio-options">
+                        <label class="radio-option">
+                            <input type="radio" name="newsletter" value="yes" checked>
+                            <span class="custom-radio"></span>
+                            Yes, please
+                        </label>
+                        <label class="radio-option">
+                            <input type="radio" name="newsletter" value="no">
+                            <span class="custom-radio"></span>
+                            No, thanks
+                        </label>
+                    </div>
+                </div>
+
+                <!-- Bio (Textarea) -->
+                <div class="form-group">
+                    <label for="bio">Short Bio</label>
+                    <textarea id="bio" name="bio" rows="3" placeholder="Tell us a bit about yourself..."></textarea>
+                </div>
+
+                <!-- Terms (Checkbox) -->
+                <div class="form-group checkbox-group">
+                    <label class="checkbox-option">
+                        <input type="checkbox" id="terms" name="terms" required>
+                        <span class="custom-checkbox"></span>
+                        I agree to the <a href="#">Terms of Service</a> & <a href="#">Privacy Policy</a>
+                    </label>
+                    <span class="error-message"></span>
+                </div>
+
+                <!-- Submit Button -->
+                <button type="submit" class="submit-btn" id="submitBtn">
+                    <span>Create Account</span>
+                    <span class="btn-arrow">→</span>
+                </button>
+            </form>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
